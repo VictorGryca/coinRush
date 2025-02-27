@@ -1,0 +1,55 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Teste jogo 2 cenas!</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="scenes/jogo.js"></script>
+    <script src="scenes/welcome.js"></script>
+
+    <style>
+        body {
+            margin-top: 1px;
+            padding: 0;
+        }
+
+        canvas {
+            border: 1px solid #000000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="game"></div>
+
+    <script type="text/javascript">
+        // Configuração inicial do jogo usando Phaser com o sistema de física Matter
+        const config = {
+            type: Phaser.AUTO, // Seleciona automaticamente entre WebGL e Canvas
+            width: 1472,                  // Resolução base fixa: largura
+            height: 828,                 // Resolução base fixa: altura
+            scale: {
+            mode: Phaser.Scale.FIT,    // Ajusta o jogo para caber na janela mantendo a proporção
+            autoCenter: Phaser.Scale.CENTER_BOTH  // Centraliza o canvas na tela
+            },
+            physics: {
+            default: "matter", // Utiliza o sistema de física Matter
+            matter: {
+                debug: false // Desativa o modo de depuração da física
+            }
+            },
+            parent: "game",
+            dom:{
+               createContainer: true,
+            },
+            scene: [jogo, welcome]
+        };
+        
+        var game = new Phaser.Game(config);
+        game.scene.start('welcome');
+    </script>
+
+</body>
+</html>

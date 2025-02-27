@@ -21,7 +21,7 @@ class jogo extends Phaser.Scene {
   // Carrega a imagem do terreno
   this.load.image('fase', '../assets/estrutura/terreno/Terrain (16x16).png');
   // Carrega o arquivo JSON do mapa de tiles
-  this.load.tilemapTiledJSON('tilefase', '../assets/estrutura/terreno/fase.json');
+  this.load.tilemapTiledJSON('tilefase', '../assets/estrutura/terreno/fase2.json');
   
   }
 
@@ -29,9 +29,9 @@ class jogo extends Phaser.Scene {
     // Cria o mapa de tiles a partir do JSON carregado
   const map = this.make.tilemap({ key: 'tilefase' });
   // Adiciona as imagens dos tilesets ao mapa
-  const tileset = map.addTilesetImage('fase1', 'fase');
+  const tileset = map.addTilesetImage('tiles', 'fase');
 
-  map.createLayer('fase1', tileset);
+  map.createLayer('camada1', tileset);
 
 
   }

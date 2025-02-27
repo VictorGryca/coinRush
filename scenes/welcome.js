@@ -1,6 +1,6 @@
 
 // Definindo a cena principal do jogo usando a biblioteca Phaser
-class welcome extends Phaser.Scene {
+export default class Welcome extends Phaser.Scene {
 
   // Construtor da cena
   constructor() {

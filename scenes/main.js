@@ -25,4 +25,4 @@ import Jogo from './jogo.js';
         };
         
         var game = new Phaser.Game(config);
-        game.scene.start('jogo');
+        game.scene.start('welcome');

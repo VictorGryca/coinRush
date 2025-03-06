@@ -18,7 +18,7 @@ export default class Jogo extends Phaser.Scene {
 
   preload(){
   // Carrega o atlas do personagem com suas imagens e dados de animação
-  this.load.atlas('chris', '../assets/chris/chris.png', '../assets/chris/chris.json');
+  this.load.atlas('chris', '../assets/chris/fighter2.png', '../assets/chris/fighter2.json');
 
   // Carrega a imagem do terreno
   this.load.image('fase', '../assets/estrutura/terreno/Terrain (16x16).png');
@@ -33,18 +33,20 @@ export default class Jogo extends Phaser.Scene {
   this.animacao = () => {
     this.anims.create({
       key: 'idle',
-      frames: [{ key: 'chris', frame: 'respirando1.png' }]
+      frameRate: 5,
+      frames: this.anims.generateFrameNames('chris', { start: 0, end: 5, prefix: 'fighterIdle', suffix: '.png' }),
+      repeat: -1
     });
     this.anims.create({
       key: 'andando',
-      frameRate: 10,
-      frames: this.anims.generateFrameNames('chris', { start: 1, end: 2, prefix: 'andada', suffix: '.png' }),
+      frameRate: 15,
+      frames: this.anims.generateFrameNames('chris', { start: 0, end: 7, prefix: 'fighterRun', suffix: '.png' }),
       repeat: -1
     });
     this.anims.create({
       key: 'pulo',
       frameRate: 10,
-      frames: this.anims.generateFrameNames('chris', { start: 0, end: 8, prefix: 'pulo', suffix: '.png' }),
+      frames: this.anims.generateFrameNames('chris', { start: 0, end: 9, prefix: 'fighterJump', suffix: '.png' }),
       repeat: -1
     });
   };
@@ -59,7 +61,7 @@ export default class Jogo extends Phaser.Scene {
   //const ground = map.createLayer('ground', tileset)
 
   // Adiciona o personagem principal à cena com escala reduzida e rotação fixa
-  this.chris = this.matter.add.sprite(125, 200, 'chris').setScale(0.25).setFixedRotation();
+  this.chris = this.matter.add.sprite(125, 200, 'chris').setScale(0.5).setFixedRotation();
   // Inicia a animação de pulo para o personagem
   this.chris.play('pulo', true);
 
@@ -75,7 +77,7 @@ export default class Jogo extends Phaser.Scene {
 
   update(){
 
-  const velocidadeMovimento = 4; // Velocidade horizontal do personagem
+  const velocidadeMovimento = 2; // Velocidade horizontal do personagem
 
   // Movimentação para a esquerda
   if (this.cursors.left.isDown) {
@@ -98,12 +100,13 @@ export default class Jogo extends Phaser.Scene {
   // Lógica de pulo: se a tecla para cima é pressionada e o personagem está no chão, ele pula
   if (this.cursors.up.isDown && this.chris.body.velocity.y === 0) {
     this.chris.setVelocityY(-8);
+    //this.chris.play("pulo", true);
   }
 
   // Enquanto o personagem estiver no ar, a animação de pulo é forçada
-  if (this.chris.body.velocity.y !== 0) {
-    this.chris.play("pulo", true);
-  }
+  // if (this.chris.body.velocity.y !== 0) {
+  //   this.chris.play("pulo", true);
+  // }
 
   if(this.chris.y >= 480){
     this.chris.x = 125;

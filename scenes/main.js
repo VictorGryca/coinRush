@@ -14,7 +14,7 @@ import Jogo from './jogo.js';
             physics: {
             default: "matter", // Utiliza o sistema de física Matter
             matter: {
-                debug: false // Desativa o modo de depuração da física
+                debug: true // Desativa o modo de depuração da física
             }
             },
             parent: "game",

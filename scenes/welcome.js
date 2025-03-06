@@ -11,10 +11,10 @@ export default class Welcome extends Phaser.Scene {
   // Método para carregar os arquivos de mídia antes da cena ser criada
   preload() {
     // Carrega a imagem de fundo da tela inicial
-    this.load.image("fundo", "../assets/diversos/FUNDO.png");
+    this.load.image("fundo", "assets/diversos/FUNDO.png");
 
     // Carrega a imagem do botão de iniciar o jogo
-    this.load.image("botao", "../assets/diversos/BOTAO.png");
+    this.load.image("botao", "assets/diversos/BOTAO.png");
   }
 
   // Método que cria os elementos da cena

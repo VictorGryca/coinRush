@@ -8,10 +8,10 @@ export default class Jogo extends Phaser.Scene {
 
   // Precarregamento de assets do jogo
   preload() {
-    this.load.atlas('fighter', '../assets/personagem/fighter2.png', '../assets/personagem/fighter2.json');
-    this.load.image('fase', '../assets/estrutura/terreno/Terrain (16x16).png');
-    this.load.tilemapTiledJSON('tilefase', '../assets/estrutura/terreno/fase2.json');
-    this.load.image('moeda', '../assets/icon/coletaveis/coin.png');
+    this.load.atlas('fighter', 'assets/personagem/fighter2.png', 'assets/personagem/fighter2.json');
+    this.load.image('fase', 'assets/estrutura/terreno/Terrain (16x16).png');
+    this.load.tilemapTiledJSON('tilefase', 'assets/estrutura/terreno/fase2.json');
+    this.load.image('moeda', 'assets/icon/coletaveis/coin.png');
   }
 
 

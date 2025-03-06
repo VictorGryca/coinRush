@@ -1,4 +1,3 @@
-Aqui está um **README rápido** para seu projeto no GitHub Pages:  
 
 ---
 

@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "Idle.png",
+	"frame": {"x":0,"y":0,"w":768,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":768,"h":128},
+	"sourceSize": {"w":768,"h":128}
+},
+{
+	"filename": "Jump.png",
+	"frame": {"x":768,"y":0,"w":1280,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":128},
+	"sourceSize": {"w":1280,"h":128}
+},
+{
+	"filename": "Run.png",
+	"frame": {"x":2048,"y":0,"w":1024,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":128},
+	"sourceSize": {"w":1024,"h":128}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "fighter.png",
+	"format": "RGBA8888",
+	"size": {"w":3072,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cae0fc2d46f2d62f3bf29ebe66834bba:7ea24887070b861309430027755a1abd:1a5a8c525302a39622fd93c490d8bc51$"
+}
+}

@@ -48,5 +48,3 @@ README.md           → Documentação do projeto
 Sugestões e melhorias são bem-vindas! Basta abrir uma **issue** ou enviar um **pull request**.  
 
 ---
-
-📌 **README simples e direto!** Agora, basta copiá-lo e colá-lo no seu `README.md` no repositório. 🚀🎮

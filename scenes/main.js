@@ -10,7 +10,7 @@ const config = {
     height: 480, // Altura fixa do jogo
 
     scale: {
-        mode: Phaser.Scale.RESIZE,        // Ajusta automaticamente o jogo para caber na janela sem distorcer
+        mode: Phaser.Scale.FIT,        // Ajusta automaticamente o jogo para caber na janela sem distorcer
         autoCenter: Phaser.Scale.CENTER_BOTH // Centraliza o jogo na tela
     },
 
